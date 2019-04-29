@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,27 +91,64 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
-	width: 80%;
+	width: 1000px;
 	margin: 0 auto;
 }
-ol, ul {
+
+@media(max-width:800px) {
+	body {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+}
+
+@media(max-width:500px) {
+	body {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+}
+
+
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -51,18 +156,23 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+	height: 100%;
+	font-family: 'Titillium Web', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Bangers', cursive;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
@@ -74,11 +184,46 @@ nav {
 	justify-content: space-around;
 }
 
+@media(max-width:800px) {
+	nav {
+		width: 100%;
+	}
+}
+
+
+@media(max-width:800px) {
+	.circle {
+		display: none;
+	}
+
+	nav {
+		display: inline-flex;
+		flex-direction: row;
+		flex-wrap: wrap-reverse;
+	}
+
+}
+
+
+@media(max-width:500px) {
+	nav {
+		display: flex;
+		flex-direction: column-reverse;
+		flex-wrap: nowrap;
+	}
+}
+
 nav a {
 	padding: 10px;
 	display: flex;
-	
 }
+
+@media(max-width:500px) {
+	nav a {
+		width: 30%;
+	}
+}
+
 
 h1 {
 	display: flex;
@@ -86,26 +231,45 @@ h1 {
 }
 
 header {
-	display:flex;
-	flex-direction: row;		
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+}
+
+
+@media(max-width:800px) {
+	header {
+		flex-direction: column;
+		line-height: 0.6;
+	}
+
+	.image2 {
+		display: none;
+	}
+
+	.image1 {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
 }
 
 
 button {
 	display: block;
-	margin-left:150px;
+	margin-left: 150px;
 }
 
 header img {
-  margin-top:20px;
-  margin-left:250px;	
+	margin-top: 20px;
+	margin-left: 250px;
 }
 
 
 header h1 {
 	font-size: 70px;
 	margin-left: 70px;
-	margin-top:20px;
+	margin-top: 20px;
 }
 
 .div1 {
@@ -113,18 +277,31 @@ header h1 {
 	display: flex;
 	position: relative;
 	padding: 10px;
-	justify-content: flex-start;		
+	justify-content: flex-start;
 }
 
-h3 {
-	display: flex;	
+@media(max-width:500px) {
+	.div1 {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
-.div1 p {
-	display: inline-block;
-	width: 55%;
-	padding: 10px;
-}   
+
+
+@media(max-width:500px) {
+	.dva {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+@media(max-width:500px) {
+	.jedan {
+		width: 90%;
+	}
+}
 
 .div2 {
 	display: flex;
@@ -134,9 +311,22 @@ h3 {
 	padding: 10px;
 }
 
+@media(max-width:800px) {
+	.div2 {
+		justify-content: space-between;
+	}
+}
+
+@media(max-width:500px) {
+	.div2 {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
 
 .dva {
-	display:flex;
+	display: flex;
 	padding: 10px;
 	width: 22%;
 	flex-direction: row;
@@ -149,16 +339,27 @@ h3 {
 	padding: 10px;
 }
 
-
 .dva:nth-child(2) {
 	display: flex;
 	flex-direction: column;
 	padding: 10px;
 }
 
-hr {
-	width:95%;	
+
+@media(max-width:500px) {
+	.dva {
+		width: 90%;
+	}
 }
+
+hr {
+	width: 95%;
+}
+
+h3 {
+	display: flex;
+}
+
 
 .dva:nth-child(3) {
 	display: flex;
@@ -166,16 +367,38 @@ hr {
 	padding: 10px;
 }
 
-
 footer {
 	display: flex;
 	flex-direction: column;
 	width: 50%;
 	padding: 10px;
 	margin: 10px;
-	
+}
+
+@media(max-width:800px) {
+	footer .copy {
+		text-align: right;
+	}
 }
 
 
+@media(max-width:500px) {
+	footer .copy {
+		text-align: center;
+	}
+}
 
 
+@media(max-width:800px) {
+	.image3 img {
+		width: 95%;
+	}
+}
+
+
+@media(max-width:500px) {
+	.image3 img {
+		width: 90%;
+	}
+
+}
